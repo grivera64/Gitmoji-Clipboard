@@ -1,5 +1,7 @@
 # Gitmoji-Clipboard
 
+![Example Run]("https://www.github.com/grivera64/Gitmoji-Clipboard/blob/main/img/ExampleRun.jpg?raw=true)
+
 ## About
 
 This program copies a gitmoji to your clipboard for the selected type of commit!

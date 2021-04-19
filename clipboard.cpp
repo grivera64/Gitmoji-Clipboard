@@ -54,7 +54,7 @@ void copy_to_clipboard(const char *input)
 #else
 
     std::stringstream cmd;
-    cmd << "echo \"" << new_clipboard << "\" | pbcopy";
+    cmd << "echo \"" << input << "\" | pbcopy";
     return exec(cmd.str().c_str());
 
 #endif

@@ -7,13 +7,16 @@
 */
 
 #include <iostream>
+#ifdef _WIN32
 #include <windows.h>
+#endif
 #include "clipboard.h"
 
 /* Reference: https://stackoverflow.com/questions/55334538/text-to-clipboard?noredirect=1&lq=1 */
 void copy_to_clipboard(const char *input)
 {
 
+#ifdef _WIN32
     /* Attempt to open the clipboard */
     if(OpenClipboard(NULL))
     {
@@ -47,5 +50,13 @@ void copy_to_clipboard(const char *input)
         
         CloseClipboard();
     }
+
+#else
+
+    std::stringstream cmd;
+    cmd << "echo \"" << new_clipboard << "\" | pbcopy";
+    return exec(cmd.str().c_str());
+
+#endif
 
 }

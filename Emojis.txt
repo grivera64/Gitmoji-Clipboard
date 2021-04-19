@@ -40,10 +40,10 @@ Downgrading dependencies
 :arrow_down:
 Lint 
 :shirt:
-Translation
-:alien:
-Text
-:pencil:
+Add/Update Translations
+:globe_with_meridians:
+Add/Edit Text and Literals
+:speech_balloon:
 Critical hotfix
 :ambulance:
 Deploying stuff

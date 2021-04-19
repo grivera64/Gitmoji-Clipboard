@@ -1,6 +1,6 @@
 # Gitmoji-Clipboard
 
-![Example Run]("https://www.github.com/grivera64/Gitmoji-Clipboard/blob/main/img/ExampleRun.jpg?raw=true)
+![Example Run](https://github.com/grivera64/Gitmoji-Clipboard/blob/main/img/ExampleRun.jpg?raw=true)
 
 ## About
 

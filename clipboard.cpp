@@ -9,6 +9,9 @@
 #include <iostream>
 #ifdef _WIN32
 #include <windows.h>
+#else
+    #include <sstream>
+    #include <stdio.h>
 #endif
 #include "clipboard.h"
 

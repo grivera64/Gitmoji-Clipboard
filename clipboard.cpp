@@ -63,3 +63,23 @@ void copy_to_clipboard(const char *input)
 #endif
 
 }
+
+#ifndef _WIN32
+// http://stackoverflow.com/questions/478898
+std::string exec(const char* cmd)
+{
+  FILE* pipe = popen(cmd, "r");
+  if (!pipe) return "ERROR";
+  char buffer[128];
+  std::string result = "";
+  while(!feof(pipe))
+  {
+    if(fgets(buffer, 128, pipe) != NULL)
+    {
+      result += buffer;
+    }
+  }
+  pclose(pipe);
+  return result;
+}
+#endif

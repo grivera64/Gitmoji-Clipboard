@@ -7,6 +7,7 @@
 */
 
 #include <iostream>
+#include <string>
 #include <unordered_map>
 #include <ctype.h>
 #include <fstream>

@@ -7,6 +7,7 @@
 */
 
 #include <iostream>
+#include <string>
 #include <vector>
 #ifndef EMOJILIST_H
 #define EMOJILIST_H

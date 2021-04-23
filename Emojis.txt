@@ -24,10 +24,12 @@ Make a test pass
 :heavy_check_mark:
 General update
 :zap:
+Add/Update Development Scripts
+:hammer:
 Improve format/structure
 :art:
 Refactor code
-:hammer:
+:recycle:
 Removing code/files
 :fire:
 Continuous Integration

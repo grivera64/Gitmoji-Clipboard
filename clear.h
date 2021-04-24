@@ -7,16 +7,9 @@
 
 */
 
-#include <cstdlib>
-
-/* Clear's the screen */
-void clear_screen()
-{
 #ifdef _WIN32
-    // Assume WindowsOS
-    system("cls");
+#include <conio.h>
 #else
-    // Assume Linux or MacOS
-    system ("clear");
+#include <stdio.h>
+#define clrscr() printf("\e[1;1H\e[2J")
 #endif
-}

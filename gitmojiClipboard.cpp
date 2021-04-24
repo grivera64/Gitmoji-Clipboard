@@ -37,7 +37,7 @@ int main(void)
     for (;;)
     {
 
-        clear_screen();
+        clrscr();
 
         std::cout << "grivera64's Gitmoji Application" << std::endl << std::endl;
 

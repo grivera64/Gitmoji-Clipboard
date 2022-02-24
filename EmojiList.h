@@ -6,24 +6,28 @@
 
 */
 
+#ifndef EMOJILIST_H
+#define EMOJILIST_H
+
 #include <iostream>
 #include <string>
 #include <vector>
-#ifndef EMOJILIST_H
-#define EMOJILIST_H
-    class EmojiList
-    {
 
-        public:
-            int insertOrder;
-            std::vector <std::string> details;
-            std::vector <std::string> labels;
+class EmojiList
+{
 
-            void add(int order, std::string detail, std::string label);
-            int getSize();
-            std::string getDetail(int pos);
-            std::string getLabel(int pos);
+    int insertOrder;
+
+public:
+    std::vector <std::string> details;
+    std::vector <std::string> labels;
+
+    void add(int order, std::string detail, std::string label);
+    int getSize();
+    std::string getDetail(int pos);
+    std::string getLabel(int pos);
 
 
-    };
+};
+
 #endif

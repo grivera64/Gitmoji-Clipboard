@@ -6,15 +6,15 @@
 
 */
 
+#include "clipboard.h"
 #include <iostream>
 #include <string>
 #ifdef _WIN32
 #include <windows.h>
 #else
-    #include <sstream>
-    #include <stdio.h>
+#include <sstream>
+#include <stdio.h>
 #endif
-#include "clipboard.h"
 
 /* Reference: https://stackoverflow.com/questions/55334538/text-to-clipboard?noredirect=1&lq=1 */
 void copy_to_clipboard(const char *input)
@@ -22,7 +22,7 @@ void copy_to_clipboard(const char *input)
 
 #ifdef _WIN32
     /* Attempt to open the clipboard */
-    if(OpenClipboard(NULL))
+    if (OpenClipboard(NULL))
     {
 
         /* Create a memory location for the clipboard's data */
@@ -30,7 +30,7 @@ void copy_to_clipboard(const char *input)
         EmptyClipboard();
 
         /* make movable/init at 0 | allow storage of string + \0 char */
-        heap = GlobalAlloc(GHND, strlen(input) + 1);                           //Allocate globally in memory
+        heap = GlobalAlloc(GHND, strlen(input) + 1); //Allocate globally in memory
 
         if (heap)
         {

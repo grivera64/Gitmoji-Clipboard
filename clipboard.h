@@ -6,12 +6,16 @@
 
 */
 
-#include <iostream>
-#include <string>
 #ifndef CLIPBOARD_H
 #define CLIPBOARD_H
-    void copy_to_clipboard(const char *data);
-    #ifndef _WIN32
-        std::string exec(const char* cmd);
-    #endif
+
+#include <iostream>
+#include <string>
+
+void copy_to_clipboard(const char *data);
+
+#ifndef _WIN32
+std::string exec(const char* cmd);
+#endif
+
 #endif

@@ -6,19 +6,19 @@
 
 */
 
+#include "EmojiList.h"
 #include <iostream>
 #include <string>
 #include <vector>
-#include "EmojiList.h"
 
 /* Adds a single entry to the list */
 void EmojiList::add(int order, std::string detail, std::string label)
 {
 
-    EmojiList::insertOrder = order;
+    insertOrder = order;
 
-    EmojiList::details.push_back(detail);
-    EmojiList::labels.push_back(label);
+    details.push_back(detail);
+    labels.push_back(label);
 
 }
 
@@ -26,7 +26,7 @@ void EmojiList::add(int order, std::string detail, std::string label)
 int EmojiList::getSize()
 {
 
-    return EmojiList::details.size();
+    return details.size();
 
 }
 
@@ -34,11 +34,11 @@ int EmojiList::getSize()
 std::string EmojiList::getDetail(int pos)
 {
 
-    if (EmojiList::details.size() < pos) return NULL;
+    if (details.size() < pos) return NULL;
 
     /* Look for matching position */
     int currPos = 0;
-    for (auto data : EmojiList::details)
+    for (auto data : details)
     {
 
         if (currPos++ == pos) return data;
@@ -55,12 +55,12 @@ std::string EmojiList::getLabel(int pos)
 
     pos--;
 
-    if (EmojiList::labels.size() < pos) return NULL;
+    if (labels.size() < pos) return NULL;
 
     int currPos = 0;
 
     /* Looks for matching position */
-    for (auto data : EmojiList::labels)
+    for (auto data : labels)
     {
 
         if (currPos++ == pos) return data;

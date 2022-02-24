@@ -11,6 +11,7 @@
 #include <unordered_map>
 #include <ctype.h>
 #include <fstream>
+
 #include "EmojiList.h"
 #include "clipboard.h"
 #include "clear.h"

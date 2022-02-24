@@ -37,5 +37,8 @@ void clrscr()
 }
 #else
 #include <stdio.h>
-#define clrscr() printf("\e[1;1H\e[2J")
+void clrscr()
+{
+    printf("\e[1;1H\e[2J");
+}
 #endif
